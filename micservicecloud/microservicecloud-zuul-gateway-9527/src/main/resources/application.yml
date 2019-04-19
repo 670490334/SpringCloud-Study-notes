@@ -1,0 +1,27 @@
+server:
+  port: 9527
+      
+spring:
+   application:
+    name: microservicecloud-zuul-gateway
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url: 
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/ 
+  instance:
+    #自定义服务名称信息
+    instance-id: gateway-9527.com
+    prefer-ip-address: true
+zuul:
+  prefix: /rabbit                               #设置统一公共前缀
+  ignored-services: "*"      #设置原真实服务名忽略  单个具体，多个可以用"*"
+  routes:             #路由访问映射
+    mydept.serviceId: microservicecloud-dept
+    mydept.path: /mydept/**
+
+info:
+  app.name: rabbit-microservicecloud
+  company.name: www.rabbit.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
