@@ -2,7 +2,7 @@
 
 ### 1.面试中常见问题
 
-![](../../SpringCloud/images/QQ截图20190412095208.png)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190412095208.png)
 
 #### dubbo和SpringCloud区别
 
@@ -26,9 +26,9 @@ SpringBoot可以离开SpringCloud独立使用开发项目，==但是SpringCloud�
 
 #### 微服务技术栈
 
-![](../../SpringCloud/images/QQ截图20190412105849.png)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190412105849.png)
 
-![](../../SpringCloud/images/QQ截图20190412105907.png)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190412105907.png)
 
 ### 2.微服务概述
 
@@ -36,15 +36,15 @@ SpringBoot可以离开SpringCloud独立使用开发项目，==但是SpringCloud�
 
 官网中的话:
 
-![](../../SpringCloud/images/QQ截图20190412095534.png)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190412095534.png)
 
 微服务:
 
-![](../../SpringCloud/images/QQ截图20190412100026.png)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190412100026.png)
 
 #### 微服务架构:
 
-一个新的架构形式，微服务架构将以前一个大的服务架构分为一个一个小的服务，对应的服务做对应的事。![](../../SpringCloud/images/QQ截图20190412103140.png)
+一个新的架构形式，微服务架构将以前一个大的服务架构分为一个一个小的服务，对应的服务做对应的事。![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190412103140.png)
 
 #### 微服务的好处和缺点：
 
@@ -73,9 +73,9 @@ SpringBoot可以离开SpringCloud独立使用开发项目，==但是SpringCloud�
 
 #### 微服务技术栈
 
-![](../../SpringCloud/images/QQ截图20190412105849.png)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190412105849.png)
 
-![](../../SpringCloud/images/QQ截图20190412105907.png)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190412105907.png)
 
 #### 为什么选取SpringCloud作为微服务架构
 
@@ -85,7 +85,7 @@ SpringCloud是一个成熟完整的微服务架构体系，它几乎支持所有
 
 ### 3.SpringCloud入门概述
 
-![](../../SpringCloud/images/QQ截图20190412111827.png)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190412111827.png)
 
 #### SpringCloud和SpringBoot的关系
 
@@ -245,10 +245,10 @@ Eureka 采用了 C-S 的设计架构。Eureka Server 作为服务注册功能的
 ==请注意和Dubbo的架构对比==
 
 ```
-   ![](../../SpringCloud/images/eureka架构01.bmp)
+   ![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/eureka架构01.bmp)
 ```
 
-![](../../SpringCloud/images/QQ截图20190412195043.png)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190412195043.png)
 
 ==Eureka包含两个组件：Eureka Server和Eureka Client==
 Eureka Server提供服务注册服务
@@ -331,7 +331,7 @@ public class EurekaServer7001_App {
 
 测试: 
 
-![](../../SpringCloud/images/QQ截图20190412222132.png)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190412222132.png)
 
 #### actuator与注册微服务信息完善
 
@@ -382,7 +382,7 @@ public class DeptProvider8001_App {
 
 测试：先启动Server，再启动Client
 
-![](../../SpringCloud/images/QQ截图20190412222938.png)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190412222938.png)
 
 但是这样会显示主机名称，可以自定义服务器信息名称
 
@@ -440,7 +440,7 @@ eureka:
 
 测试:
 
-![](../../SpringCloud/images/QQ截图20190412223814.png)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190412223814.png)
 
 但是还有问题：点击超链接会出现ErrorPage
 
@@ -547,7 +547,7 @@ info:
 
 测试超链接：
 
-![](../../SpringCloud/images/QQ截图20190412230355.png)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190412230355.png)
 
 #### eureka自我保护
 
@@ -616,7 +616,7 @@ info:
 
    基本原理
 
-   ![](../../SpringCloud/images/集群原理.bmp)
+   ![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/集群原理.bmp)
 
    上图是来自eureka的官方架构图，这是基于集群配置的eureka； 
 
@@ -919,7 +919,7 @@ public class DeptController_Consumer {
 
 #### Ribbon的负载均衡
 
-![](../../SpringCloud/images/ribbon负载均衡架构.bmp)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/ribbon负载均衡架构.bmp)
 
 Ribbon在工作时分成两步
 第一步先选择 EurekaServer ,它优先选择在同一个区域内负载较少的server.
@@ -1038,9 +1038,9 @@ info:
 
 测试如图：
 
-![](../../SpringCloud/images/QQ截图20190413193726.png)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190413193726.png)
 
-![](../../SpringCloud/images/QQ截图20190413193753.png)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190413193753.png)
 
 **总结：Ribbon其实就是一个软负载均衡的客户端组件，**
 **他可以和其他所需请求的客户端结合使用，和eureka结合只是其中的一个实例。**
@@ -1270,7 +1270,7 @@ http://projects.spring.io/spring-cloud/spring-cloud.html#spring-cloud-feign
 
  Feign是一个声明式WebService客户端。使用Feign能让编写Web Service客户端更加简单, 它的使用方法是定义一个接口，然后在上面添加注解，同时也支持JAX-RS标准的注解。Feign也支持可拔插式的编码器和解码器。Spring Cloud对Feign进行了封装，使其支持了Spring MVC标准注解和HttpMessageConverters。Feign可以与Eureka和Ribbon组合使用以支持负载均衡。
 
- ![](../../SpringCloud/images/QQ截图20190413221956.png)
+ ![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190413221956.png)
 
  Feign是一个声明式的Web服务客户端，使得编写Web服务客户端变得非常容易，
 ==只需要创建一个接口，然后在上面添加注解即可==。
@@ -1408,7 +1408,7 @@ public class DeptController_Consumet_Feign {
 分布式系统面临的问题
 ==复杂分布式体系结构中的应用程序有数十个依赖关系，每个依赖关系在某些时候将不可避免地失败。==
 
-![](../../SpringCloud/images/分布式面临的问题.bmp)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/分布式面临的问题.bmp)
 
 **服务雪崩**
 多个微服务之间调用的时候，假设微服务A调用微服务B和微服务C，微服务B和微服务C又调用其它的微服务，这就是所谓的“扇出”。如果扇出的链路上某个微服务的调用响应时间过长或者不可用，对微服务A的调用就会占用越来越多的系统资源，进而引起系统崩溃，所谓的“雪崩效应”.
@@ -1558,7 +1558,7 @@ public class DeptController {
 
 再在主启动类上添加注解：**@EnableCircuitBreaker**//对hystrixR熔断机制的支持
 
-启动测试！![](../../SpringCloud/images/QQ截图20190418154756.png)
+启动测试！![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190418154756.png)
 
 #### 服务降级
 
@@ -1646,7 +1646,7 @@ eureka:
 
 再访问：<http://localhost/consumer/dept/get/1>：如图所示
 
-![](../../SpringCloud/images/QQ截图20190418160641.png)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/QQ截图20190418160641.png)
 
 **此时服务端provider已经down了，但是我们做了服务降级处理，让客户端在服务端不可用时也会获得提示信息而不会挂起耗死服务器**
 
@@ -1755,11 +1755,11 @@ public class DeptConsumer_DashBoard_App {
 
 填写监控地址:
 
-![](../../SpringCloud/images/监控地址.bmp)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/监控地址.bmp)
 
 监控结果:
 
-![](../../SpringCloud/images/监控结果.png)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/监控结果.png)
 
 多次刷新：<http://localhost:8001/dept/get/1>查看监控图的变化
 
@@ -1776,7 +1776,7 @@ public class DeptConsumer_DashBoard_App {
 
 ##### 如何看监控结果图:
 
-![](../../SpringCloud/images/监控图信息.bmp)
+![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/监控图信息.bmp)
 
 ### zuul路由网关
 
@@ -1956,7 +1956,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
 
 2. 是什么？
 
-   ![](../../SpringCloud/images/图片.png)
+   ![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/图片.png)
 
    SpringCloud Config为微服务架构中的微服务提供集中化的外部配置支持，配置服务器为==各个不同微服务应用==的所有环境提供了一个==中心化的外部配置。==
 
@@ -2150,7 +2150,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
 
 9. 配置读取规则
 
-   ![](../../SpringCloud/images/读取规则.bmp)
+   ![rabbit](https://github.com/670490334/SpringCloud-Study-notes/blob/master/images/读取规则.bmp)
 
    /{application}-{profile}.yml:
 
