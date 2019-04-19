@@ -2,7 +2,7 @@
 
 ### 1.面试中常见问题
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190412095208.png)
+![](../../SpringCloud/images/QQ截图20190412095208.png)
 
 #### dubbo和SpringCloud区别
 
@@ -26,9 +26,9 @@ SpringBoot可以离开SpringCloud独立使用开发项目，==但是SpringCloud�
 
 #### 微服务技术栈
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190412105849.png)
+![](../../SpringCloud/images/QQ截图20190412105849.png)
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190412105907.png)
+![](../../SpringCloud/images/QQ截图20190412105907.png)
 
 ### 2.微服务概述
 
@@ -36,15 +36,15 @@ SpringBoot可以离开SpringCloud独立使用开发项目，==但是SpringCloud�
 
 官网中的话:
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190412095534.png)
+![](../../SpringCloud/images/QQ截图20190412095534.png)
 
 微服务:
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190412100026.png)
+![](../../SpringCloud/images/QQ截图20190412100026.png)
 
 #### 微服务架构:
 
-一个新的架构形式，微服务架构将以前一个大的服务架构分为一个一个小的服务，对应的服务做对应的事。![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190412103140.png)
+一个新的架构形式，微服务架构将以前一个大的服务架构分为一个一个小的服务，对应的服务做对应的事。![](../../SpringCloud/images/QQ截图20190412103140.png)
 
 #### 微服务的好处和缺点：
 
@@ -73,9 +73,9 @@ SpringBoot可以离开SpringCloud独立使用开发项目，==但是SpringCloud�
 
 #### 微服务技术栈
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190412105849.png)
+![](../../SpringCloud/images/QQ截图20190412105849.png)
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190412105907.png)
+![](../../SpringCloud/images/QQ截图20190412105907.png)
 
 #### 为什么选取SpringCloud作为微服务架构
 
@@ -85,7 +85,7 @@ SpringCloud是一个成熟完整的微服务架构体系，它几乎支持所有
 
 ### 3.SpringCloud入门概述
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190412111827.png)
+![](../../SpringCloud/images/QQ截图20190412111827.png)
 
 #### SpringCloud和SpringBoot的关系
 
@@ -244,9 +244,11 @@ Eureka 采用了 C-S 的设计架构。Eureka Server 作为服务注册功能的
 而系统中的其他微服务，使用 Eureka 的客户端连接到 Eureka Server并维持心跳连接。这样系统的维护人员就可以通过 Eureka Server 来监控系统中各个微服务是否正常运行。SpringCloud 的一些其他模块（比如Zuul）就可以通过 Eureka Server 来发现系统中的其他微服务，并执行相关的逻辑。
 ==请注意和Dubbo的架构对比==
 
-       ![](D:\lf\javaFrameStudy\SpringCloud\images\eureka架构01.bmp)
+```
+   ![](../../SpringCloud/images/eureka架构01.bmp)
+```
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190412195043.png)
+![](../../SpringCloud/images/QQ截图20190412195043.png)
 
 ==Eureka包含两个组件：Eureka Server和Eureka Client==
 Eureka Server提供服务注册服务
@@ -329,7 +331,7 @@ public class EurekaServer7001_App {
 
 测试: 
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190412222132.png)
+![](../../SpringCloud/images/QQ截图20190412222132.png)
 
 #### actuator与注册微服务信息完善
 
@@ -347,6 +349,7 @@ public class EurekaServer7001_App {
      <groupId>org.springframework.cloud</groupId>
      <artifactId>spring-cloud-starter-config</artifactId>
    </dependency>
+
 ```
 
 在yml中加上eureka配置加入注册
@@ -356,6 +359,7 @@ eureka:
   client: #客户端注册进eureka服务列表内
     service-url: 
       defaultZone: http://localhost:7001/eureka
+
 
 ```
 
@@ -373,11 +377,12 @@ public class DeptProvider8001_App {
 
 }
 
+
 ```
 
 测试：先启动Server，再启动Client
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190412222938.png)
+![](../../SpringCloud/images/QQ截图20190412222938.png)
 
 但是这样会显示主机名称，可以自定义服务器信息名称
 
@@ -389,6 +394,7 @@ public class DeptProvider8001_App {
     instance-id: microservicecloud-dept8001
     #访问路径可以显示ip地址
     prefer-ip-address: true
+
 
 ```
 
@@ -429,11 +435,12 @@ eureka:
     #访问路径可以显示ip地址
     prefer-ip-address: true
 
+
 ```
 
 测试:
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190412223814.png)
+![](../../SpringCloud/images/QQ截图20190412223814.png)
 
 但是还有问题：点击超链接会出现ErrorPage
 
@@ -445,6 +452,7 @@ eureka:
      <groupId>org.springframework.boot</groupId>
      <artifactId>spring-boot-starter-actuator</artifactId>
    </dependency>
+
 
 ```
 
@@ -473,6 +481,7 @@ eureka:
   </build>
 
 
+
 ```
 
 修改microservicecloud-provider-dept-8001:
@@ -485,6 +494,7 @@ info:
   company.name: www.rabbit.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
+
 
 
 ```
@@ -532,11 +542,12 @@ info:
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 
+
 ```
 
 测试超链接：
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190412230355.png)
+![](../../SpringCloud/images/QQ截图20190412230355.png)
 
 #### eureka自我保护
 
@@ -566,6 +577,7 @@ info:
 	@Autowired
 	private DiscoveryClient client;
 
+
 ```
 
 添加方法:
@@ -584,6 +596,7 @@ info:
 		return this.client;
 	}
 
+
 ```
 
 在80中调用该服务方法:
@@ -594,6 +607,7 @@ info:
 		return restTemplate.getForObject(REST_URL_PREFIX+"dept/discovery", Object.class);
 	}
 
+
 ```
 
 #### 集群配置
@@ -602,7 +616,7 @@ info:
 
    基本原理
 
-   ![](D:\lf\javaFrameStudy\SpringCloud\images\集群原理.bmp)
+   ![](../../SpringCloud/images/集群原理.bmp)
 
    上图是来自eureka的官方架构图，这是基于集群配置的eureka； 
 
@@ -623,6 +637,7 @@ info:
    127.0.0.1  eureka7001.com
    127.0.0.1  eureka7002.com
    127.0.0.1  eureka7003.com
+   
    
    ```
 
@@ -647,6 +662,7 @@ info:
           #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）。
          defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
    
+   
    ```
 
    7002:
@@ -665,6 +681,7 @@ info:
          #单机 defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/      
           #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）。
          defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7003.com:7003/eureka/
+   
    
    ```
 
@@ -685,6 +702,7 @@ info:
           #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）。
          defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
    
+   
    ```
 
    
@@ -700,6 +718,7 @@ eureka:
   client: #客户端注册进eureka服务列表内
     service-url: 
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/ 
+
 
 ```
 
@@ -746,6 +765,7 @@ info:
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 
+
 ```
 
 #### 作为服务注册中心，Eureka比Zookeeper好在哪里
@@ -756,6 +776,7 @@ info:
 C:Consitency：强一致性
 A:Availability ：可用性
 P:Partition tolerance :分区容错性
+
 
 ```
 
@@ -818,6 +839,7 @@ public class ConfigBean {
 	}
 }
 
+
 ```
 
 启动类加上@EnableEurekaClient
@@ -830,6 +852,7 @@ public class DeptConsumer80_App {
 		SpringApplication.run(DeptConsumer80_App.class, args);
 	}
 }
+
 
 ```
 
@@ -850,6 +873,7 @@ public class DeptConsumer80_App {
      <artifactId>spring-cloud-starter-config</artifactId>
    </dependency>
 
+
 ```
 
 修改yml：
@@ -865,6 +889,7 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
       
 
+
 ```
 
 修改DeptController_Consumer客户端访问类:
@@ -876,6 +901,7 @@ public class DeptController_Consumer {
 	//private String REST_URL_PREFIX = "http://localhost:8001";
 	//换成服务名,不关心其端口号
 	private String REST_URL_PREFIX = "http://microservicecloud-dept";
+
 
 ```
 
@@ -893,7 +919,7 @@ public class DeptController_Consumer {
 
 #### Ribbon的负载均衡
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\ribbon负载均衡架构.bmp)
+![](../../SpringCloud/images/ribbon负载均衡架构.bmp)
 
 Ribbon在工作时分成两步
 第一步先选择 EurekaServer ,它优先选择在同一个区域内负载较少的server.
@@ -953,6 +979,7 @@ info:
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 
+
 ```
 
 8003：
@@ -998,6 +1025,7 @@ info:
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 
+
 ```
 
 启动3个eureka集群配置区；
@@ -1010,9 +1038,9 @@ info:
 
 测试如图：
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190413193726.png)
+![](../../SpringCloud/images/QQ截图20190413193726.png)
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190413193753.png)
+![](../../SpringCloud/images/QQ截图20190413193753.png)
 
 **总结：Ribbon其实就是一个软负载均衡的客户端组件，**
 **他可以和其他所需请求的客户端结合使用，和eureka结合只是其中的一个实例。**
@@ -1058,6 +1086,7 @@ public class ConfigBean {
 }
 
 
+
 ```
 
 #### Ribbon自定义
@@ -1089,6 +1118,7 @@ public class ConfigBean {
    }
    
    
+   
    ```
 
 2. 修改主启动类，在主启动类加上：@RibbonClient
@@ -1102,6 +1132,7 @@ public class ConfigBean {
    		SpringApplication.run(DeptConsumer80_App.class, args);
    	}
    }
+   
    
    ```
 
@@ -1206,6 +1237,7 @@ public class ConfigBean {
    }
    
    
+   
    ```
 
 4. 加入配置类:
@@ -1220,6 +1252,7 @@ public class ConfigBean {
    		return new RandomRule_LF();//使用我们自己定义的IRule
    	}
    }
+   
    
    
    ```
@@ -1237,7 +1270,7 @@ http://projects.spring.io/spring-cloud/spring-cloud.html#spring-cloud-feign
 
  Feign是一个声明式WebService客户端。使用Feign能让编写Web Service客户端更加简单, 它的使用方法是定义一个接口，然后在上面添加注解，同时也支持JAX-RS标准的注解。Feign也支持可拔插式的编码器和解码器。Spring Cloud对Feign进行了封装，使其支持了Spring MVC标准注解和HttpMessageConverters。Feign可以与Eureka和Ribbon组合使用以支持负载均衡。
 
- ![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190413221956.png)
+ ![](../../SpringCloud/images/QQ截图20190413221956.png)
 
  Feign是一个声明式的Web服务客户端，使得编写Web服务客户端变得非常容易，
 ==只需要创建一个接口，然后在上面添加注解即可==。
@@ -1261,6 +1294,7 @@ Feign旨在使编写Java Http客户端变得更容易。
      <groupId>org.springframework.cloud</groupId>
      <artifactId>spring-cloud-starter-feign</artifactId>
    </dependency>
+
 
 ```
 
@@ -1292,6 +1326,7 @@ public interface DeptClientService {
 }
 
 
+
 ```
 
 maven install;
@@ -1307,6 +1342,7 @@ maven install;
        <groupId>org.springframework.cloud</groupId>
        <artifactId>spring-cloud-starter-feign</artifactId>
    </dependency>
+
 
 ```
 
@@ -1340,6 +1376,7 @@ public class DeptController_Consumet_Feign {
 
 }
 
+
 ```
 
 启动eureka集群
@@ -1371,7 +1408,7 @@ public class DeptController_Consumet_Feign {
 分布式系统面临的问题
 ==复杂分布式体系结构中的应用程序有数十个依赖关系，每个依赖关系在某些时候将不可避免地失败。==
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\分布式面临的问题.bmp)
+![](../../SpringCloud/images/分布式面临的问题.bmp)
 
 **服务雪崩**
 多个微服务之间调用的时候，假设微服务A调用微服务B和微服务C，微服务B和微服务C又调用其它的微服务，这就是所谓的“扇出”。如果扇出的链路上某个微服务的调用响应时间过长或者不可用，对微服务A的调用就会占用越来越多的系统资源，进而引起系统崩溃，所谓的“雪崩效应”.
@@ -1442,6 +1479,7 @@ Hystrix是一个用于处理分布式系统的**延迟**和**容错**的开源�
      <artifactId>spring-cloud-starter-hystrix</artifactId>
    </dependency>
 
+
 ```
 
 修改yml中的instance-id
@@ -1486,6 +1524,7 @@ info:
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 
+
 ```
 
 ##### @HystrixCommand报异常后如何处理
@@ -1514,17 +1553,21 @@ public class DeptController {
 	}
 }
 
+
 ```
 
 再在主启动类上添加注解：**@EnableCircuitBreaker**//对hystrixR熔断机制的支持
 
-启动测试！![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190418154756.png)
+启动测试！![](../../SpringCloud/images/QQ截图20190418154756.png)
 
 #### 服务降级
 
 ##### 什么是服务降级
 
-	整体资源快不够了，忍痛将某些服务先关掉，待渡过难关，再开启回来。
+```
+整体资源快不够了，忍痛将某些服务先关掉，待渡过难关，再开启回来。
+
+```
 
 服务降级处理是在客户端实现完成的，与服务端没有关系
 
@@ -1562,12 +1605,14 @@ public class DeptClientServiceFallbackFactory implements FallbackFactory<DeptCli
 	}
 }
 
+
 ```
 
 修改DeptClientService的注解:在注解@FeignClient中添加fallbackFactory属性值
 
 ```java
 @FeignClient(value="microservicecloud-dept",fallbackFactory=DeptClientServiceFallbackFactory.class)
+
 
 ```
 
@@ -1590,6 +1635,7 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
       
 
+
 ```
 
 启动工程测试：
@@ -1600,7 +1646,7 @@ eureka:
 
 再访问：<http://localhost/consumer/dept/get/1>：如图所示
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\QQ截图20190418160641.png)
+![](../../SpringCloud/images/QQ截图20190418160641.png)
 
 **此时服务端provider已经down了，但是我们做了服务降级处理，让客户端在服务端不可用时也会获得提示信息而不会挂起耗死服务器**
 
@@ -1672,6 +1718,7 @@ pom依赖：
    </dependency> 
   </dependencies>
 
+
 ```
 
 主启动类:**@EnableHystrixDashboard**
@@ -1685,6 +1732,7 @@ public class DeptConsumer_DashBoard_App {
 	}
 }
 
+
 ```
 
 所有provider都依赖：
@@ -1696,6 +1744,7 @@ public class DeptConsumer_DashBoard_App {
      <artifactId>spring-boot-starter-actuator</artifactId>
    </dependency>
 
+
 ```
 
 启动microservicecloud-consumer-hystrix-dashboard该微服务监控消费端:http://localhost:9001/hystrix
@@ -1706,11 +1755,11 @@ public class DeptConsumer_DashBoard_App {
 
 填写监控地址:
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\监控地址.bmp)
+![](../../SpringCloud/images/监控地址.bmp)
 
 监控结果:
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\监控结果.png)
+![](../../SpringCloud/images/监控结果.png)
 
 多次刷新：<http://localhost:8001/dept/get/1>查看监控图的变化
 
@@ -1720,13 +1769,14 @@ public class DeptConsumer_DashBoard_App {
 
 曲线：用来记录2分钟内流量的相对变化，可以通过它来观察到流量的上升和下降趋势。
 
+
 ```
 
 
 
 ##### 如何看监控结果图:
 
-![](D:\lf\javaFrameStudy\SpringCloud\images\监控图信息.bmp)
+![](../../SpringCloud/images/监控图信息.bmp)
 
 ### zuul路由网关
 
@@ -1735,6 +1785,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
 
 ```powershell
 注意：Zuul服务最终还是会注册进Eureka
+
 
 ```
 
@@ -1807,6 +1858,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
       </dependency>
      </dependencies>
    
+   
    ```
 
 3. yml
@@ -1840,6 +1892,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
      build.artifactId: $project.artifactId$
      build.version: $project.version$
    
+   
    ```
 
    zuul的yml配置：
@@ -1851,6 +1904,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
      routes:             #路由访问映射
        mydept.serviceId: microservicecloud-dept
        mydept.path: /mydept/**
+   
    
    ```
 
@@ -1867,6 +1921,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
    	}
    
    }
+   
    
    ```
 
@@ -1886,6 +1941,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
        mydept.serviceId: microservicecloud-dept
        mydept.path: /mydept/**
    
+   
    ```
 
    访问：<http://myzuul.com:9527/rabbit/mydept/dept/get/2>
@@ -1900,7 +1956,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
 
 2. 是什么？
 
-   ![](D:\lf\javaFrameStudy\SpringCloud\images\图片.png)
+   ![](../../SpringCloud/images/图片.png)
 
    SpringCloud Config为微服务架构中的微服务提供集中化的外部配置支持，配置服务器为==各个不同微服务应用==的所有环境提供了一个==中心化的外部配置。==
 
@@ -1926,8 +1982,11 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
 
 ###### 与GitHub整合配置
 
-	由于SpringCloud Config默认使用Git来存储配置文件(也有其它方式,比如支持SVN和本地文件)，
-	但最推荐的还是Git，而且使用的是http/https访问的形式
+```
+由于SpringCloud Config默认使用Git来存储配置文件(也有其它方式,比如支持SVN和本地文件)，
+但最推荐的还是Git，而且使用的是http/https访问的形式
+
+```
 
 #### SpringCloud Config服务端配置
 
@@ -1937,6 +1996,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
 
    ```shell
    git clone + 地址
+   
    
    ```
 
@@ -1960,6 +2020,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
    #  请保存为UTF-8格式
     
    
+   
    ```
 
 4. 推送到github上面
@@ -1968,6 +2029,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
    git add .
    git commit -m "init yml"
    git push origin master
+   
    
    ```
 
@@ -2030,6 +2092,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
    		</dependency>
    	</dependencies>
    
+   
    ```
 
    yml文件：
@@ -2046,6 +2109,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
          server:
            git:
              uri: https://github.com/670490334/microservicecloud-config.git #GitHub上面的git仓库名字
+   
    
    ```
 
@@ -2068,6 +2132,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
    }
    
    
+   
    ```
 
 7. 修改host文件映射：**127.0.0.1  config-3344.com**
@@ -2080,11 +2145,12 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
    http://config-3344.com:3344/application-dev.yml
    http://config-3344.com:3344/application-dev.yml
    
+   
    ```
 
 9. 配置读取规则
 
-   ![](D:\lf\javaFrameStudy\SpringCloud\images\读取规则.bmp)
+   ![](../../SpringCloud/images/读取规则.bmp)
 
    /{application}-{profile}.yml:
 
@@ -2092,6 +2158,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
    http://config-3344.com:3344/application-dev.yml
    http://config-3344.com:3344/application-dev.yml
    http://config-3344.com:3344/application-dev.yml
+   
    
    ```
 
@@ -2102,6 +2169,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
    http://config-3344.com:3344/application/test/master
    http://config-3344.com:3344/application/xxx/master
    
+   
    ```
 
    /{label}/{application}-{profile}.yml
@@ -2109,6 +2177,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
    ```shell
    http://config-3344.com:3344/master/application-dev.yml
    http://config-3344.com:3344/master/application-test.yml
+   
    
    ```
 
@@ -2151,6 +2220,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
        service-url: 
          defaultZone: http://eureka-test.com:7001/eureka/
     
+   
    
    
    
@@ -2208,6 +2278,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
      </dependencies> 
    
    
+   
    ```
 
 6. ==bootstrap.yml==
@@ -2227,6 +2298,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
          label: master   
          uri: http://config-3344.com:3344  #本微服务启动后先去找3344号服务，通过SpringCloudConfig获取GitHub的服务地址
    
+   
    ```
 
 7. application.yml
@@ -2236,12 +2308,14 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
      application:
        name: microservicecloud-config-client
    
+   
    ```
 
 8. windows下修改hosts文件，增加映射
 
    ```shell
    127.0.0.1  client-config.com
+   
    
    ```
 
@@ -2269,6 +2343,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
    
    }
    
+   
    ```
 
 10. 主启动类:
@@ -2281,6 +2356,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
     		SpringApplication.run(ConfigClient_3355_StartSpringCloudApp.class, args);
     	}
     }
+    
     
     
     ```
@@ -2356,6 +2432,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
          fetch-registry: false #不通过eureka获取注册信息
          service-url: 
            defaultZone: http://eureka7001.com:7001/eureka/
+     
      
      ```
 
@@ -2445,6 +2522,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
      
      
      
+     
      ```
 
 2. Config版的eureka服务端
@@ -2476,6 +2554,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
        </dependencies>
      
      
+     
      ```
 
    - bootstrap.yml:
@@ -2491,6 +2570,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
      
      
      
+     
      ```
 
    - application.yml
@@ -2499,6 +2579,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
      spring:
        application:
          name: microservicecloud-config-eureka-client
+     
      
      
      
@@ -2524,6 +2605,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
      	}
      }
      
+     
      ```
 
 3. Config版的dept微服务
@@ -2547,6 +2629,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
            label: master
            uri: http://config-3344.com:3344  #SpringCloudConfig获取的服务地址
      
+     
      ```
 
    - application.yml
@@ -2556,6 +2639,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
        application:
          name: microservicecloud-config-dept-client
      
+     
      ```
 
    - 启动测试访问：
@@ -2563,6 +2647,7 @@ Zuul包含了对请求的路由和过滤两个最主要的功能：
      ```shell
      根据bootstarp里面的profile的值区分访问
      访问地址：http://localhost:8001/dept/list
+     
      
      ```
 
